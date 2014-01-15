@@ -17,10 +17,10 @@
 <script type="text/javascript">
 
 // Music
-	var musicbutton = document.getElementById('music');
+	var musicButton = document.getElementById('music');
 
-	musicbutton.addEventListener("click", function(){ 
-		Titanium.App.fireEvent("webButtonClick");
+	musicButton.addEventListener("click", function(){ 
+		Titanium.App.fireEvent("musicButtonClick");
 	}, false);
 
 	Titanium.App.addEventListener("musicIsPlaying", function(){
@@ -29,7 +29,13 @@
 	})
 
 //Camera
-	var cameraButton = document
+	var cameraButton = document.getElementById("kamera");
+	
+	cameraButton.addEventListener("click", function() {
+		Titanium.App.fireEvent("cameraButtonClick");
+	}, false)
+	
+	Titanium.App.addEventlistener("")
 
 </script>
 

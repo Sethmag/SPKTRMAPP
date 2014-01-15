@@ -12,18 +12,30 @@
 
 
 <div id="music">play Music</div>
+<div id="kamera">start kamera</div>
 
 <script type="text/javascript">
-	var musicbutton = document.getElementById('music');
 
-	musicbutton.addEventListener("click", function(){ 
-Titanium.App.fireEvent("webButtonClick");
+// Music
+	var musicButton = document.getElementById('music');
+
+	musicButton.addEventListener("click", function(){ 
+		Titanium.App.fireEvent("musicButtonClick");
 	}, false);
 
 	Titanium.App.addEventListener("musicIsPlaying", function(){
 
 		alert('musicIsPlaying');
 	})
+
+//Camera
+	var cameraButton = document.getElementById("kamera");
+	
+	cameraButton.addEventListener("click", function() {
+		Titanium.App.fireEvent("cameraButtonClick");
+	}, false)
+	
+	Titanium.App.addEventlistener("")
 
 </script>
 
